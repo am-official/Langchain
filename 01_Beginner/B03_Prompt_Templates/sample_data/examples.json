@@ -1,0 +1,44 @@
+[
+  {
+    "input": {
+      "topic": "retrieval",
+      "audience": "a beginner",
+      "style": "Analogy"
+    },
+    "expected": {
+      "variables": [
+        "audience",
+        "style",
+        "topic"
+      ]
+    }
+  },
+  {
+    "input": {
+      "topic": "a {literal}",
+      "audience": "engineer",
+      "style": "Checklist"
+    },
+    "expected": {
+      "variables": [
+        "audience",
+        "style",
+        "topic"
+      ]
+    }
+  },
+  {
+    "input": {
+      "topic": "tools",
+      "audience": "student",
+      "style": "Short explanation"
+    },
+    "expected": {
+      "variables": [
+        "audience",
+        "style",
+        "topic"
+      ]
+    }
+  }
+]

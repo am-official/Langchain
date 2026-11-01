@@ -1,0 +1,41 @@
+[
+  {
+    "input": {
+      "question": "tools",
+      "documents": [
+        "Agents call tools."
+      ]
+    },
+    "expected": {
+      "answer": "[doc-1] Agents call tools.",
+      "sources": [
+        "doc-1"
+      ]
+    }
+  },
+  {
+    "input": {
+      "question": "state",
+      "documents": [
+        "Graphs maintain state."
+      ]
+    },
+    "expected": {
+      "sources": [
+        "doc-1"
+      ]
+    }
+  },
+  {
+    "input": {
+      "question": "!!!",
+      "documents": [
+        "Agents call tools."
+      ]
+    },
+    "expected": {
+      "answer": "No matching evidence. I do not know.",
+      "sources": []
+    }
+  }
+]

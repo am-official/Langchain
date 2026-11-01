@@ -1,0 +1,35 @@
+[
+  {
+    "input": {
+      "thread": "a",
+      "message": "Refund please",
+      "decision": "submit"
+    },
+    "expected": {
+      "pending": true,
+      "approved": false,
+      "route": "financial"
+    }
+  },
+  {
+    "input": {
+      "thread": "b",
+      "message": "The app crashes",
+      "decision": "submit"
+    },
+    "expected": {
+      "pending": false,
+      "route": "technical"
+    }
+  },
+  {
+    "input": {
+      "thread": "c",
+      "message": "Payment problem",
+      "decision": "submit"
+    },
+    "expected": {
+      "pending": true
+    }
+  }
+]

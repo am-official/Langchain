@@ -1,0 +1,31 @@
+[
+  {
+    "input": {
+      "message": "Hi",
+      "threshold": 10
+    },
+    "expected": {
+      "route": "small",
+      "answer": "Small local fixture."
+    }
+  },
+  {
+    "input": {
+      "message": "This is a longer request",
+      "threshold": 10
+    },
+    "expected": {
+      "route": "large",
+      "answer": "Large local fixture."
+    }
+  },
+  {
+    "input": {
+      "message": "1234567890",
+      "threshold": 10
+    },
+    "expected": {
+      "route": "small"
+    }
+  }
+]

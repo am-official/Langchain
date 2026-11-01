@@ -1,0 +1,26 @@
+[
+  {
+    "input": {
+      "topic": "reliability"
+    },
+    "expected": {
+      "branches": 2
+    }
+  },
+  {
+    "input": {
+      "topic": "retrieval"
+    },
+    "expected": {
+      "branches": 2
+    }
+  },
+  {
+    "input": {
+      "topic": "monitoring"
+    },
+    "expected": {
+      "branches": 2
+    }
+  }
+]

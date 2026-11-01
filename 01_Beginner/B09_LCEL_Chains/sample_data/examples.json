@@ -1,0 +1,28 @@
+[
+  {
+    "input": {
+      "text": "Hello world"
+    },
+    "expected": {
+      "words": 2,
+      "uppercase": "HELLO WORLD",
+      "original": "Hello world"
+    }
+  },
+  {
+    "input": {
+      "text": "one"
+    },
+    "expected": {
+      "words": 1
+    }
+  },
+  {
+    "input": {
+      "text": "tools, models, graphs"
+    },
+    "expected": {
+      "words": 3
+    }
+  }
+]

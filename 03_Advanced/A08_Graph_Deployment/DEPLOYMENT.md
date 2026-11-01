@@ -1,0 +1,4 @@
+# Local serving and managed deployment
+Install requirements, then run `python -m uvicorn server:app --host 127.0.0.1 --port 8123` from this folder. POST JSON `{"text":"hello"}` to `/invoke`; expect `{"text":"hello","answer":"Graph response: hello"}`. GET `/health` is a process readiness probe, not a functional proof; use POST for validation. No authentication is configured: keep this teaching endpoint on loopback.
+
+langgraph.json declares the graph export for a future LangGraph CLI/deployment workflow. Install the CLI in a separate compatible environment and follow current official deployment documentation when available. A manifest alone is not a deployment; cloud access, account configuration, authorization, durable storage, secrets, and live tests remain required. No cloud deployment was performed.

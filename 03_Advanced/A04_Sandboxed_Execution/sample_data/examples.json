@@ -1,0 +1,26 @@
+[
+  {
+    "input": {
+      "expression": "(12+8)/4"
+    },
+    "expected": {
+      "answer": "5.0"
+    }
+  },
+  {
+    "input": {
+      "expression": "2*3+1"
+    },
+    "expected": {
+      "answer": "7"
+    }
+  },
+  {
+    "input": {
+      "expression": "-4+2"
+    },
+    "expected": {
+      "answer": "-2"
+    }
+  }
+]

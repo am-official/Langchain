@@ -1,0 +1,32 @@
+[
+  {
+    "input": {
+      "dataset": "d",
+      "question": "q",
+      "reference": "a"
+    },
+    "expected": {
+      "dataset": "d"
+    }
+  },
+  {
+    "input": {
+      "dataset": "e",
+      "question": "r",
+      "reference": "b"
+    },
+    "expected": {
+      "storage": "local SQLite; not a LangSmith cloud dataset"
+    }
+  },
+  {
+    "input": {
+      "dataset": "f",
+      "question": "s",
+      "reference": "c"
+    },
+    "expected": {
+      "dataset": "f"
+    }
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "input": {
+      "tenant": "team-a",
+      "question": "policy",
+      "records": [
+        {
+          "tenant": "team-a",
+          "text": "Policy is public to team-a."
+        },
+        {
+          "tenant": "team-b",
+          "text": "Secret team-b policy."
+        }
+      ]
+    },
+    "expected": {
+      "tenant": "team-a",
+      "sources": [
+        "doc-1"
+      ]
+    }
+  },
+  {
+    "input": {
+      "tenant": "team-b",
+      "question": "!!!",
+      "records": [
+        {
+          "tenant": "team-a",
+          "text": "Secret"
+        }
+      ]
+    },
+    "expected": {
+      "answer": "No authorized evidence.",
+      "sources": []
+    }
+  },
+  {
+    "input": {
+      "tenant": "team-b",
+      "question": "tools",
+      "records": [
+        {
+          "tenant": "team-b",
+          "text": "Tools for team-b."
+        }
+      ]
+    },
+    "expected": {
+      "sources": [
+        "doc-1"
+      ]
+    }
+  }
+]

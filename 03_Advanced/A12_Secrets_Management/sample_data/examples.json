@@ -1,0 +1,26 @@
+[
+  {
+    "input": {
+      "log": "OPENAI_API_KEY=abcdef"
+    },
+    "expected": {
+      "answer": "OPENAI_API_KEY=[REDACTED]"
+    }
+  },
+  {
+    "input": {
+      "log": "Authorization: Bearer abcdef"
+    },
+    "expected": {
+      "answer": "Authorization: Bearer [REDACTED]"
+    }
+  },
+  {
+    "input": {
+      "log": "safe message"
+    },
+    "expected": {
+      "answer": "safe message"
+    }
+  }
+]

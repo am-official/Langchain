@@ -1,0 +1,63 @@
+[
+  {
+    "input": {
+      "runs": [
+        {
+          "id": "a",
+          "thread": "t",
+          "latency_ms": 10,
+          "cost_usd": 0.01,
+          "error": false
+        }
+      ]
+    },
+    "expected": {
+      "thread_count": 1,
+      "threads": {
+        "t": {
+          "runs": 1,
+          "errors": 0,
+          "cost_usd": 0.01,
+          "mean_latency_ms": 10.0
+        }
+      }
+    }
+  },
+  {
+    "input": {
+      "runs": [
+        {
+          "id": "a",
+          "thread": "x",
+          "latency_ms": 20,
+          "cost_usd": 0,
+          "error": true
+        }
+      ]
+    },
+    "expected": {
+      "thread_count": 1
+    }
+  },
+  {
+    "input": {
+      "runs": [
+        {
+          "id": "a",
+          "thread": "x",
+          "latency_ms": 20,
+          "cost_usd": 0
+        },
+        {
+          "id": "b",
+          "thread": "y",
+          "latency_ms": 30,
+          "cost_usd": 0
+        }
+      ]
+    },
+    "expected": {
+      "thread_count": 2
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "input": {
+      "text": "great helpful"
+    },
+    "expected": {
+      "answer": "positive",
+      "score": 2
+    }
+  },
+  {
+    "input": {
+      "text": "bad broken"
+    },
+    "expected": {
+      "answer": "negative",
+      "score": -2
+    }
+  },
+  {
+    "input": {
+      "text": "ordinary day"
+    },
+    "expected": {
+      "answer": "neutral",
+      "score": 0
+    }
+  }
+]

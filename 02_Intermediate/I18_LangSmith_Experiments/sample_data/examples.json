@@ -1,0 +1,51 @@
+[
+  {
+    "input": {
+      "examples": [
+        {
+          "input": "tools",
+          "reference": "tools"
+        }
+      ]
+    },
+    "expected": {
+      "scores": {
+        "echo-v1": 1.0,
+        "prefix-v2": 0.0
+      },
+      "examples": 1
+    }
+  },
+  {
+    "input": {
+      "examples": [
+        {
+          "input": "x",
+          "reference": "answer x"
+        }
+      ]
+    },
+    "expected": {
+      "scores": {
+        "echo-v1": 0.0,
+        "prefix-v2": 1.0
+      }
+    }
+  },
+  {
+    "input": {
+      "examples": [
+        {
+          "input": "a",
+          "reference": "b"
+        }
+      ]
+    },
+    "expected": {
+      "scores": {
+        "echo-v1": 0.0,
+        "prefix-v2": 0.0
+      }
+    }
+  }
+]

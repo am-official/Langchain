@@ -1,0 +1,55 @@
+[
+  {
+    "input": {
+      "runs": [
+        {
+          "id": "a",
+          "latency_ms": 1000,
+          "cost_usd": 0
+        }
+      ],
+      "p95_threshold": 500,
+      "min_samples": 1
+    },
+    "expected": {
+      "triggered": true,
+      "reasons": [
+        "p95_latency"
+      ],
+      "new_alert": true
+    }
+  },
+  {
+    "input": {
+      "runs": [
+        {
+          "id": "b",
+          "latency_ms": 10,
+          "cost_usd": 0
+        }
+      ],
+      "p95_threshold": 500,
+      "min_samples": 1
+    },
+    "expected": {
+      "triggered": false
+    }
+  },
+  {
+    "input": {
+      "runs": [
+        {
+          "id": "c",
+          "latency_ms": 1000,
+          "cost_usd": 0
+        }
+      ],
+      "p95_threshold": 500,
+      "min_samples": 3
+    },
+    "expected": {
+      "insufficient_samples": true,
+      "triggered": false
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "input": {
+      "text": "Hello",
+      "language": "Spanish"
+    },
+    "expected": {
+      "answer": "Hola"
+    }
+  },
+  {
+    "input": {
+      "text": "Thank you",
+      "language": "French"
+    },
+    "expected": {
+      "answer": "Merci"
+    }
+  },
+  {
+    "input": {
+      "text": "Goodbye",
+      "language": "Spanish"
+    },
+    "expected": {
+      "answer": "Adiós"
+    }
+  }
+]

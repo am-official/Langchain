@@ -1,0 +1,28 @@
+[
+  {
+    "input": {
+      "expression": "2 + 3 * 4"
+    },
+    "expected": {
+      "answer": "14",
+      "numeric_result": "14",
+      "tool_calls": 1
+    }
+  },
+  {
+    "input": {
+      "expression": "(10 - 4) / 2"
+    },
+    "expected": {
+      "answer": "3.0"
+    }
+  },
+  {
+    "input": {
+      "expression": "-5 + 2"
+    },
+    "expected": {
+      "answer": "-3"
+    }
+  }
+]

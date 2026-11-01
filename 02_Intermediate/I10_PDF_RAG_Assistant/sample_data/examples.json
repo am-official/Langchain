@@ -1,0 +1,37 @@
+[
+  {
+    "input": {
+      "question": "tools",
+      "pages": [
+        "Agents use tools."
+      ]
+    },
+    "expected": {
+      "matches": 1
+    }
+  },
+  {
+    "input": {
+      "question": "state",
+      "pages": [
+        "Tools execute.",
+        "Graphs maintain state."
+      ]
+    },
+    "expected": {
+      "matches": 1
+    }
+  },
+  {
+    "input": {
+      "question": "!!!",
+      "pages": [
+        "Agents use tools."
+      ]
+    },
+    "expected": {
+      "matches": 0,
+      "answer": "No matching page evidence."
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "message": "Explain retrieval"
+    },
+    "expected": {
+      "events": [
+        "guard_passed",
+        "model_started",
+        "model_finished"
+      ]
+    }
+  },
+  {
+    "input": {
+      "message": "Hello"
+    },
+    "expected": {
+      "tool_calls": 0
+    }
+  },
+  {
+    "input": {
+      "message": "Summarize tools"
+    },
+    "expected": {
+      "answer": "Local agent complete."
+    }
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "input": {
+      "job": "a",
+      "action": "start",
+      "items": [
+        "one",
+        "two"
+      ]
+    },
+    "expected": {
+      "cursor": 0,
+      "completed": [],
+      "pending": true
+    }
+  },
+  {
+    "input": {
+      "job": "b",
+      "action": "start",
+      "items": [
+        "one"
+      ]
+    },
+    "expected": {
+      "cursor": 0
+    }
+  },
+  {
+    "input": {
+      "job": "c",
+      "action": "start",
+      "items": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "expected": {
+      "pending": true
+    }
+  }
+]

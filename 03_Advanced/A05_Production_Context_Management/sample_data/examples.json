@@ -1,0 +1,55 @@
+[
+  {
+    "input": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello"
+        }
+      ],
+      "budget": 20
+    },
+    "expected": {
+      "used_characters": 5,
+      "dropped": 0
+    }
+  },
+  {
+    "input": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        }
+      ],
+      "budget": 20
+    },
+    "expected": {
+      "messages": [],
+      "dropped": 1
+    }
+  },
+  {
+    "input": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "first"
+        },
+        {
+          "role": "assistant",
+          "content": "reply"
+        },
+        {
+          "role": "user",
+          "content": "last"
+        }
+      ],
+      "budget": 20
+    },
+    "expected": {
+      "dropped": 0,
+      "used_characters": 14
+    }
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "input": {
+      "text": "{\"name\":\"Ada\",\"email\":\"ada@example.com\",\"age\":28}"
+    },
+    "expected": {
+      "contact": {
+        "name": "Ada",
+        "email": "ada@example.com",
+        "age": 28
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "{\"name\":\"Lin\",\"email\":\"lin@example.org\",\"age\":0}"
+    },
+    "expected": {
+      "schema_fields": [
+        "age",
+        "email",
+        "name"
+      ]
+    }
+  },
+  {
+    "input": {
+      "text": "{\"name\":\"Sam\",\"email\":\"sam@example.net\",\"age\":130}"
+    },
+    "expected": {
+      "contact": {
+        "name": "Sam",
+        "email": "sam@example.net",
+        "age": 130
+      }
+    }
+  }
+]

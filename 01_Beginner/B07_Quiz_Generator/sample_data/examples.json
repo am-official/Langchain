@@ -1,0 +1,37 @@
+[
+  {
+    "input": {
+      "facts": "A: first"
+    },
+    "expected": {
+      "questions": [
+        {
+          "question": "What is A?",
+          "answer": "first"
+        }
+      ],
+      "count": 1
+    }
+  },
+  {
+    "input": {
+      "facts": "A: first\nB: second"
+    },
+    "expected": {
+      "count": 2
+    }
+  },
+  {
+    "input": {
+      "facts": "LangGraph: orchestration"
+    },
+    "expected": {
+      "questions": [
+        {
+          "question": "What is LangGraph?",
+          "answer": "orchestration"
+        }
+      ]
+    }
+  }
+]

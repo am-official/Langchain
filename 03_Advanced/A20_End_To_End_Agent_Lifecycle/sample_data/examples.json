@@ -1,0 +1,50 @@
+[
+  {
+    "input": {
+      "examples": [
+        {
+          "input": "tools",
+          "reference": "tools"
+        }
+      ],
+      "candidate": "echo",
+      "gate": 90
+    },
+    "expected": {
+      "score": 1.0,
+      "released": true
+    }
+  },
+  {
+    "input": {
+      "examples": [
+        {
+          "input": "wrong",
+          "reference": "right"
+        }
+      ],
+      "candidate": "echo",
+      "gate": 90
+    },
+    "expected": {
+      "score": 0.0,
+      "released": false
+    }
+  },
+  {
+    "input": {
+      "examples": [
+        {
+          "input": "TOOLS",
+          "reference": "tools"
+        }
+      ],
+      "candidate": "uppercase",
+      "gate": 100
+    },
+    "expected": {
+      "score": 1.0,
+      "released": true
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "input": {
+      "brief": "Review RAG"
+    },
+    "expected": {
+      "delegations": 1
+    }
+  },
+  {
+    "input": {
+      "brief": "Review tools"
+    },
+    "expected": {
+      "delegations": 1
+    }
+  },
+  {
+    "input": {
+      "brief": "Review traces"
+    },
+    "expected": {
+      "delegations": 1
+    }
+  }
+]

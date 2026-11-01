@@ -1,0 +1,26 @@
+[
+  {
+    "input": {
+      "message": "Refund please"
+    },
+    "expected": {
+      "route": "billing"
+    }
+  },
+  {
+    "input": {
+      "message": "The app crashes"
+    },
+    "expected": {
+      "route": "technical"
+    }
+  },
+  {
+    "input": {
+      "message": "Missing invoice"
+    },
+    "expected": {
+      "route": "billing"
+    }
+  }
+]

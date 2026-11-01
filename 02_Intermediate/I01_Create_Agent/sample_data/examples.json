@@ -1,0 +1,27 @@
+[
+  {
+    "input": {
+      "message": "Hello"
+    },
+    "expected": {
+      "answer": "Local agent received: Hello",
+      "tool_calls": 0
+    }
+  },
+  {
+    "input": {
+      "message": "Tools?"
+    },
+    "expected": {
+      "tool_calls": 0
+    }
+  },
+  {
+    "input": {
+      "message": "State?"
+    },
+    "expected": {
+      "tool_calls": 0
+    }
+  }
+]

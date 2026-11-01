@@ -1,0 +1,55 @@
+[
+  {
+    "input": {
+      "labels": [
+        {
+          "human": 1,
+          "judge": 1
+        },
+        {
+          "human": 0,
+          "judge": 0
+        }
+      ]
+    },
+    "expected": {
+      "agreement": 1.0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  {
+    "input": {
+      "labels": [
+        {
+          "human": 0,
+          "judge": 1
+        }
+      ]
+    },
+    "expected": {
+      "matrix": {
+        "tp": 0,
+        "fp": 1,
+        "tn": 0,
+        "fn": 0
+      },
+      "precision": 0.0,
+      "recall": null
+    }
+  },
+  {
+    "input": {
+      "labels": [
+        {
+          "human": 1,
+          "judge": 0
+        }
+      ]
+    },
+    "expected": {
+      "agreement": 0.0,
+      "recall": 0.0
+    }
+  }
+]

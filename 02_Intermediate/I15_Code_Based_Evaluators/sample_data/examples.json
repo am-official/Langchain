@@ -1,0 +1,32 @@
+[
+  {
+    "input": {
+      "prediction": "Tools!",
+      "reference": "tools"
+    },
+    "expected": {
+      "exact_match": true,
+      "token_f1": 1.0
+    }
+  },
+  {
+    "input": {
+      "prediction": "a b",
+      "reference": "a c"
+    },
+    "expected": {
+      "exact_match": false,
+      "token_f1": 0.5
+    }
+  },
+  {
+    "input": {
+      "prediction": "x",
+      "reference": "y"
+    },
+    "expected": {
+      "exact_match": false,
+      "token_f1": 0.0
+    }
+  }
+]

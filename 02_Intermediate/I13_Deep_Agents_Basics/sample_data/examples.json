@@ -1,0 +1,31 @@
+[
+  {
+    "input": {
+      "task": "Study tools"
+    },
+    "expected": {
+      "todo_count": 1
+    }
+  },
+  {
+    "input": {
+      "task": "Study traces"
+    },
+    "expected": {
+      "todos": [
+        {
+          "content": "Study traces",
+          "status": "in_progress"
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "task": "Study graphs"
+    },
+    "expected": {
+      "todo_count": 1
+    }
+  }
+]

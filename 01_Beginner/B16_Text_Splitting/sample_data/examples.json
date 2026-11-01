@@ -1,0 +1,35 @@
+[
+  {
+    "input": {
+      "text": "short text",
+      "size": 20,
+      "overlap": 2
+    },
+    "expected": {
+      "count": 1,
+      "max_length": 10
+    }
+  },
+  {
+    "input": {
+      "text": "abcdefghijklmnopqrst",
+      "size": 10,
+      "overlap": 0
+    },
+    "expected": {
+      "count": 2,
+      "max_length": 10
+    }
+  },
+  {
+    "input": {
+      "text": "abcdefghijklmno",
+      "size": 10,
+      "overlap": 5
+    },
+    "expected": {
+      "count": 2,
+      "max_length": 10
+    }
+  }
+]

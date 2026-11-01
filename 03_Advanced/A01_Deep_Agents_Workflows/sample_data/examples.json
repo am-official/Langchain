@@ -1,0 +1,32 @@
+[
+  {
+    "input": {
+      "task": "Study evaluation"
+    },
+    "expected": {
+      "files": [
+        "/plan.md"
+      ]
+    }
+  },
+  {
+    "input": {
+      "task": "Plan tests"
+    },
+    "expected": {
+      "files": [
+        "/plan.md"
+      ]
+    }
+  },
+  {
+    "input": {
+      "task": "Review traces"
+    },
+    "expected": {
+      "files": [
+        "/plan.md"
+      ]
+    }
+  }
+]

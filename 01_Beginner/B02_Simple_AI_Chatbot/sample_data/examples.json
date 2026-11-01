@@ -1,0 +1,36 @@
+[
+  {
+    "input": {
+      "message": "Hello"
+    },
+    "expected": {
+      "turns": 1
+    }
+  },
+  {
+    "input": {
+      "message": "Tools?"
+    },
+    "expected": {
+      "turns": 1
+    }
+  },
+  {
+    "input": {
+      "message": "Next",
+      "history": [
+        {
+          "role": "user",
+          "content": "Hi"
+        },
+        {
+          "role": "assistant",
+          "content": "Hello"
+        }
+      ]
+    },
+    "expected": {
+      "turns": 2
+    }
+  }
+]

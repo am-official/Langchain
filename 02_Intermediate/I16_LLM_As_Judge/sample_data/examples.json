@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "prediction": "Tools!",
+      "reference": "tools"
+    },
+    "expected": {
+      "score": 1,
+      "judge": "code baseline"
+    }
+  },
+  {
+    "input": {
+      "prediction": "bad",
+      "reference": "good"
+    },
+    "expected": {
+      "score": 0
+    }
+  },
+  {
+    "input": {
+      "prediction": "A B",
+      "reference": "a b"
+    },
+    "expected": {
+      "score": 1
+    }
+  }
+]

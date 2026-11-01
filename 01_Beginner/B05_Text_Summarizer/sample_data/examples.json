@@ -1,0 +1,32 @@
+[
+  {
+    "input": {
+      "text": "One. Two. Three.",
+      "sentences": 2
+    },
+    "expected": {
+      "answer": "One. Two.",
+      "source_sentences": 3
+    }
+  },
+  {
+    "input": {
+      "text": "Only one sentence.",
+      "sentences": 3
+    },
+    "expected": {
+      "answer": "Only one sentence.",
+      "source_sentences": 1
+    }
+  },
+  {
+    "input": {
+      "text": "First! Second?",
+      "sentences": 1
+    },
+    "expected": {
+      "answer": "First!",
+      "source_sentences": 2
+    }
+  }
+]

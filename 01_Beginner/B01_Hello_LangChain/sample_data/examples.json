@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Ada",
+    "language": "English",
+    "tone": "Warm",
+    "expected": "Hello, Ada! Welcome to your first LangChain lab."
+  },
+  {
+    "name": "Lin",
+    "language": "Spanish",
+    "tone": "Professional",
+    "expected": "Hola, Lin! Your learning session is ready."
+  },
+  {
+    "name": "Sam",
+    "language": "French",
+    "tone": "Playful",
+    "expected": "Bonjour, Sam! Let the learning adventure begin!"
+  }
+]

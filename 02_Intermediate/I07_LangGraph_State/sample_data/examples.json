@@ -1,0 +1,27 @@
+[
+  {
+    "input": {
+      "text": "  one   two "
+    },
+    "expected": {
+      "normalized": "one two",
+      "words": 2
+    }
+  },
+  {
+    "input": {
+      "text": "solo"
+    },
+    "expected": {
+      "words": 1
+    }
+  },
+  {
+    "input": {
+      "text": "a b c"
+    },
+    "expected": {
+      "words": 3
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "thread": "a",
+      "message": "Hello"
+    },
+    "expected": {
+      "status": "success",
+      "answer": "Local run: Hello"
+    }
+  },
+  {
+    "input": {
+      "thread": "b",
+      "message": "Tools?"
+    },
+    "expected": {
+      "thread": "b"
+    }
+  },
+  {
+    "input": {
+      "thread": "c",
+      "message": "State?"
+    },
+    "expected": {
+      "status": "success"
+    }
+  }
+]

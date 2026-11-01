@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "task": "Review tests"
+    },
+    "expected": {
+      "skill": "review",
+      "automatic_discovery": false
+    }
+  },
+  {
+    "input": {
+      "task": "Review retrieval"
+    },
+    "expected": {
+      "files": [
+        "AGENTS.md",
+        "skills/review/SKILL.md"
+      ]
+    }
+  },
+  {
+    "input": {
+      "task": "Review prompts"
+    },
+    "expected": {
+      "skill": "review"
+    }
+  }
+]

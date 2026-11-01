@@ -1,0 +1,29 @@
+[
+  {
+    "input": {
+      "text": "one two"
+    },
+    "expected": {
+      "tools": [
+        "count_words"
+      ],
+      "expected_words": 2
+    }
+  },
+  {
+    "input": {
+      "text": "solo"
+    },
+    "expected": {
+      "expected_words": 1
+    }
+  },
+  {
+    "input": {
+      "text": "a b c"
+    },
+    "expected": {
+      "expected_words": 3
+    }
+  }
+]

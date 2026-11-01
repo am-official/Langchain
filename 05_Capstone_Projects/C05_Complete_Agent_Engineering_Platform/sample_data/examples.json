@@ -1,0 +1,43 @@
+[
+  {
+    "input": {
+      "question": "tools",
+      "documents": [
+        "Agents call tools."
+      ],
+      "reference": "Agents call tools.",
+      "gate": 90
+    },
+    "expected": {
+      "evidence_token_f1": 1.0,
+      "gate_passed": true
+    }
+  },
+  {
+    "input": {
+      "question": "!!!",
+      "documents": [
+        "Agents call tools."
+      ],
+      "reference": "Agents call tools.",
+      "gate": 90
+    },
+    "expected": {
+      "gate_passed": false,
+      "answer": "No evidence found."
+    }
+  },
+  {
+    "input": {
+      "question": "state",
+      "documents": [
+        "Graphs maintain state."
+      ],
+      "reference": "Graphs maintain state.",
+      "gate": 100
+    },
+    "expected": {
+      "gate_passed": true
+    }
+  }
+]

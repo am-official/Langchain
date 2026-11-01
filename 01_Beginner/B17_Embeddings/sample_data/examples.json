@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "text": "agent",
+      "other": "agent"
+    },
+    "expected": {
+      "dimensions": 64,
+      "cosine_similarity": 1.0
+    }
+  },
+  {
+    "input": {
+      "text": "tool",
+      "other": "tool"
+    },
+    "expected": {
+      "cosine_similarity": 1.0
+    }
+  },
+  {
+    "input": {
+      "text": "!!!",
+      "other": "???"
+    },
+    "expected": {
+      "cosine_similarity": 0
+    }
+  }
+]

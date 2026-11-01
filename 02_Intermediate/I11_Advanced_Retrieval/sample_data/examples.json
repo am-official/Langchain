@@ -1,0 +1,37 @@
+[
+  {
+    "input": {
+      "question": "tools",
+      "documents": [
+        "Tools execute.",
+        "Graphs maintain state."
+      ]
+    },
+    "expected": {
+      "top_source": "doc-1"
+    }
+  },
+  {
+    "input": {
+      "question": "state",
+      "documents": [
+        "Tools execute.",
+        "Graphs maintain state."
+      ]
+    },
+    "expected": {
+      "top_source": "doc-2"
+    }
+  },
+  {
+    "input": {
+      "question": "!!!",
+      "documents": [
+        "Tools execute."
+      ]
+    },
+    "expected": {
+      "top_source": null
+    }
+  }
+]

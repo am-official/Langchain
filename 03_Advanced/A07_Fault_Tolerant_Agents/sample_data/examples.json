@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "value": "report",
+      "transient_failures": 0
+    },
+    "expected": {
+      "answer": "REPORT",
+      "attempts": 1
+    }
+  },
+  {
+    "input": {
+      "value": "report",
+      "transient_failures": 1
+    },
+    "expected": {
+      "attempts": 2
+    }
+  },
+  {
+    "input": {
+      "value": "report",
+      "transient_failures": 2
+    },
+    "expected": {
+      "attempts": 3
+    }
+  }
+]

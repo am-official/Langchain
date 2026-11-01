@@ -1,0 +1,47 @@
+[
+  {
+    "input": {
+      "feedback": [
+        {
+          "topic": "tools",
+          "sentiment": "negative"
+        }
+      ]
+    },
+    "expected": {
+      "negative_share": 1.0
+    }
+  },
+  {
+    "input": {
+      "feedback": [
+        {
+          "topic": "tools",
+          "sentiment": "positive"
+        }
+      ]
+    },
+    "expected": {
+      "negative_share": 0.0
+    }
+  },
+  {
+    "input": {
+      "feedback": [
+        {
+          "topic": "x",
+          "sentiment": "neutral"
+        }
+      ]
+    },
+    "expected": {
+      "topics": {
+        "x": {
+          "positive": 0,
+          "negative": 0,
+          "neutral": 1
+        }
+      }
+    }
+  }
+]

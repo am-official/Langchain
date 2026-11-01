@@ -1,0 +1,27 @@
+[
+  {
+    "input": {
+      "message": "Hello"
+    },
+    "expected": {
+      "answer": "Local streaming example: Hello ",
+      "chunk_count": 4
+    }
+  },
+  {
+    "input": {
+      "message": "Two words"
+    },
+    "expected": {
+      "chunk_count": 5
+    }
+  },
+  {
+    "input": {
+      "message": "Tools?"
+    },
+    "expected": {
+      "answer": "Local streaming example: Tools? "
+    }
+  }
+]

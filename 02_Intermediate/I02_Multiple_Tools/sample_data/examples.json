@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "text": "one two"
+    },
+    "expected": {
+      "tool_calls": 2,
+      "expected_words": 2,
+      "expected_characters": 7
+    }
+  },
+  {
+    "input": {
+      "text": "one"
+    },
+    "expected": {
+      "tool_calls": 2,
+      "expected_words": 1
+    }
+  },
+  {
+    "input": {
+      "text": "你好"
+    },
+    "expected": {
+      "tool_calls": 2,
+      "expected_characters": 2
+    }
+  }
+]

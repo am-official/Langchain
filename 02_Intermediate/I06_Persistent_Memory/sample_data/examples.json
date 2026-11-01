@@ -1,0 +1,34 @@
+[
+  {
+    "input": {
+      "user": "ada",
+      "action": "save",
+      "value": "brief"
+    },
+    "expected": {
+      "value": "brief",
+      "found": true
+    }
+  },
+  {
+    "input": {
+      "user": "lin",
+      "action": "save",
+      "value": "detailed"
+    },
+    "expected": {
+      "value": "detailed"
+    }
+  },
+  {
+    "input": {
+      "user": "unknown",
+      "action": "load",
+      "value": ""
+    },
+    "expected": {
+      "value": null,
+      "found": false
+    }
+  }
+]

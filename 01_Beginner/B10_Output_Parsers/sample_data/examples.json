@@ -1,0 +1,38 @@
+[
+  {
+    "input": {
+      "text": "{\"task\":\"Review\",\"priority\":2,\"done\":false}"
+    },
+    "expected": {
+      "task": {
+        "task": "Review",
+        "priority": 2,
+        "done": false
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "{\"task\":\"Run\",\"priority\":1,\"done\":true}"
+    },
+    "expected": {
+      "task": {
+        "task": "Run",
+        "priority": 1,
+        "done": true
+      }
+    }
+  },
+  {
+    "input": {
+      "text": "{\"task\":\"Deploy\",\"priority\":3,\"done\":false}"
+    },
+    "expected": {
+      "task": {
+        "task": "Deploy",
+        "priority": 3,
+        "done": false
+      }
+    }
+  }
+]

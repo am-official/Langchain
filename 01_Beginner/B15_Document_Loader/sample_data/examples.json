@@ -1,0 +1,38 @@
+[
+  {
+    "input": {
+      "text": "Hello",
+      "source": "a.txt"
+    },
+    "expected": {
+      "characters": 5,
+      "count": 1
+    }
+  },
+  {
+    "input": {
+      "text": "Bonjour",
+      "source": "b.txt"
+    },
+    "expected": {
+      "documents": [
+        {
+          "page_content": "Bonjour",
+          "metadata": {
+            "source": "b.txt",
+            "encoding": "UTF-8"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "input": {
+      "text": "你好",
+      "source": "utf8.txt"
+    },
+    "expected": {
+      "characters": 2
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "text": "one two"
+    },
+    "expected": {
+      "words": 2,
+      "characters": 7,
+      "export_requested": false
+    }
+  },
+  {
+    "input": {
+      "text": " one   two "
+    },
+    "expected": {
+      "words": 2,
+      "characters": 7
+    }
+  },
+  {
+    "input": {
+      "text": "trace"
+    },
+    "expected": {
+      "words": 1,
+      "cloud_delivery_verified": false
+    }
+  }
+]

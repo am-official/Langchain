@@ -1,0 +1,33 @@
+[
+  {
+    "input": {
+      "thread": "a",
+      "action": "pause",
+      "request": "Draft reply"
+    },
+    "expected": {
+      "pending": true,
+      "executed": false
+    }
+  },
+  {
+    "input": {
+      "thread": "b",
+      "action": "pause",
+      "request": "Review"
+    },
+    "expected": {
+      "decision": "pending"
+    }
+  },
+  {
+    "input": {
+      "thread": "c",
+      "action": "pause",
+      "request": "Publish"
+    },
+    "expected": {
+      "pending": true
+    }
+  }
+]

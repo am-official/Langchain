@@ -1,0 +1,52 @@
+[
+  {
+    "input": {
+      "message": "My name is Ada.",
+      "max_messages": 4
+    },
+    "expected": {
+      "answer": "Local memory: Ada",
+      "prompt_messages": 1
+    }
+  },
+  {
+    "input": {
+      "message": "Who am I?",
+      "max_messages": 4,
+      "history": [
+        {
+          "role": "user",
+          "content": "My name is Lin"
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Lin"
+        }
+      ]
+    },
+    "expected": {
+      "answer": "Local memory: Lin",
+      "prompt_messages": 3
+    }
+  },
+  {
+    "input": {
+      "message": "Who am I?",
+      "max_messages": 2,
+      "history": [
+        {
+          "role": "user",
+          "content": "My name is Lin"
+        },
+        {
+          "role": "assistant",
+          "content": "Hi Lin"
+        }
+      ]
+    },
+    "expected": {
+      "answer": "Local memory: no name in retained context",
+      "prompt_messages": 1
+    }
+  }
+]

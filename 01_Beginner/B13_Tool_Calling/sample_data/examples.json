@@ -1,0 +1,26 @@
+[
+  {
+    "input": {
+      "text": "one two"
+    },
+    "expected": {
+      "word_count": 2
+    }
+  },
+  {
+    "input": {
+      "text": "one"
+    },
+    "expected": {
+      "word_count": 1
+    }
+  },
+  {
+    "input": {
+      "text": "alpha, beta; gamma"
+    },
+    "expected": {
+      "word_count": 3
+    }
+  }
+]

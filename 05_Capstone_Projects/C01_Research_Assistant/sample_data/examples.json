@@ -1,0 +1,40 @@
+[
+  {
+    "input": {
+      "question": "tools",
+      "documents": [
+        "Agents call tools."
+      ]
+    },
+    "expected": {
+      "sources": [
+        "doc-1"
+      ]
+    }
+  },
+  {
+    "input": {
+      "question": "!!!",
+      "documents": [
+        "Agents call tools."
+      ]
+    },
+    "expected": {
+      "answer": "No evidence found. Supply relevant sources before concluding.",
+      "sources": []
+    }
+  },
+  {
+    "input": {
+      "question": "state",
+      "documents": [
+        "Graphs maintain state."
+      ]
+    },
+    "expected": {
+      "sources": [
+        "doc-1"
+      ]
+    }
+  }
+]

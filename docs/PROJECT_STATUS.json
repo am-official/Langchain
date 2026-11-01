@@ -1,0 +1,392 @@
+[
+  {
+    "path": "01_Beginner/B01_Hello_LangChain",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B02_Simple_AI_Chatbot",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B03_Prompt_Templates",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B04_Language_Translator",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B05_Text_Summarizer",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B06_Sentiment_Analyzer",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B07_Quiz_Generator",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B08_Structured_Output",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B09_LCEL_Chains",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B10_Output_Parsers",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B11_Streaming_Chatbot",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B12_Conversation_History",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B13_Tool_Calling",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B14_Calculator_Agent",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B15_Document_Loader",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B16_Text_Splitting",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B17_Embeddings",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B18_Vector_Search",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B19_Simple_RAG",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "01_Beginner/B20_LangSmith_Tracing",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I01_Create_Agent",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I02_Multiple_Tools",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I03_Agent_Middleware",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I04_Dynamic_Model_Selection",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I05_Context_Engineering",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I06_Persistent_Memory",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I07_LangGraph_State",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I08_Conditional_Routing",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I09_Human_In_The_Loop",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I10_PDF_RAG_Assistant",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I11_Advanced_Retrieval",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I12_MCP_Tool_Integration",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I13_Deep_Agents_Basics",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I14_AGENTS_And_SKILL_Files",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I15_Code_Based_Evaluators",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I16_LLM_As_Judge",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I17_LangSmith_Datasets",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I18_LangSmith_Experiments",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I19_Offline_Online_Evaluations",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "02_Intermediate/I20_Evaluator_Alignment",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A01_Deep_Agents_Workflows",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A02_Subagents_And_Delegation",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A03_Long_Running_Agents",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A04_Sandboxed_Execution",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A05_Production_Context_Management",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A06_Multi_Agent_Orchestration",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A07_Fault_Tolerant_Agents",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A08_Graph_Deployment",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A09_Revisions_And_Assistants",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A10_Threads_And_Runs",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A11_Authentication_Authorization",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A12_Secrets_Management",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A13_Persistent_Storage",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A14_Multi_Region_Deployment",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A15_Trace_Analysis",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A16_Thread_Analysis",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A17_Cost_Latency_Monitoring",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A18_Sentiment_And_Insights",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A19_Production_Alerts",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "03_Advanced/A20_End_To_End_Agent_Lifecycle",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "05_Capstone_Projects/C01_Research_Assistant",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "05_Capstone_Projects/C02_Enterprise_RAG_Agent",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "05_Capstone_Projects/C03_Multi_Agent_Research_System",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "05_Capstone_Projects/C04_Production_Customer_Support",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  },
+  {
+    "path": "05_Capstone_Projects/C05_Complete_Agent_Engineering_Platform",
+    "status": "local_tests_passed_live_services_unverified",
+    "validation": "docs/test-results.xml",
+    "scope": "Self-contained local teaching application; consult project documentation for simulation and live-service limits."
+  }
+]

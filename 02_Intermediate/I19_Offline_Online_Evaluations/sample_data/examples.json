@@ -1,0 +1,47 @@
+[
+  {
+    "input": {
+      "mode": "offline",
+      "records": [
+        {
+          "id": "a",
+          "prediction": "Tools",
+          "reference": "tools"
+        }
+      ]
+    },
+    "expected": {
+      "mean_score": 1.0
+    }
+  },
+  {
+    "input": {
+      "mode": "online",
+      "records": [
+        {
+          "id": "b",
+          "prediction": "ok",
+          "latency_ms": 1001
+        }
+      ]
+    },
+    "expected": {
+      "mean_score": 0.0
+    }
+  },
+  {
+    "input": {
+      "mode": "online",
+      "records": [
+        {
+          "id": "c",
+          "prediction": "ok",
+          "latency_ms": 30
+        }
+      ]
+    },
+    "expected": {
+      "mean_score": 1.0
+    }
+  }
+]

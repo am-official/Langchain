@@ -1,0 +1,30 @@
+[
+  {
+    "input": {
+      "assistant": "a",
+      "instructions": "first"
+    },
+    "expected": {
+      "assistant": "a",
+      "instructions": "first"
+    }
+  },
+  {
+    "input": {
+      "assistant": "b",
+      "instructions": "second"
+    },
+    "expected": {
+      "assistant": "b"
+    }
+  },
+  {
+    "input": {
+      "assistant": "c",
+      "instructions": "third"
+    },
+    "expected": {
+      "instructions": "third"
+    }
+  }
+]

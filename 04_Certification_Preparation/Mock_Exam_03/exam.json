@@ -1,0 +1,922 @@
+[
+  {
+    "id": "M3-01",
+    "domain": "Building",
+    "topic": "Agent selection",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a team needs a single tool-calling loop, not filesystem planning or delegation. Which conclusion follows from the available evidence?",
+    "options": [
+      "Start with create_agent and a small allowlisted toolset.",
+      "Always use Deep Agents for every prompt.",
+      "Use a parser as the agent control loop.",
+      "Execute arbitrary Python from the prompt."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "create_agent provides the basic agent loop; Deep Agents adds planning, files, and delegation when those capabilities are needed.",
+      "B": "Incorrect: this proposes \u201cAlways use Deep Agents for every prompt.\u201d create_agent provides the basic agent loop; Deep Agents adds planning, files, and delegation when those capabilities are needed. The supported action is: Start with create_agent and a small allowlisted toolset.",
+      "C": "Incorrect: this proposes \u201cUse a parser as the agent control loop.\u201d create_agent provides the basic agent loop; Deep Agents adds planning, files, and delegation when those capabilities are needed. The supported action is: Start with create_agent and a small allowlisted toolset.",
+      "D": "Incorrect: this proposes \u201cExecute arbitrary Python from the prompt.\u201d create_agent provides the basic agent loop; Deep Agents adds planning, files, and delegation when those capabilities are needed. The supported action is: Start with create_agent and a small allowlisted toolset."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I01_Create_Agent"
+  },
+  {
+    "id": "M3-02",
+    "domain": "Building",
+    "topic": "Deep Agents",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a task requires a plan and a virtual artifact before a final response. Which conclusion follows from the available evidence?",
+    "options": [
+      "Assume a virtual file is a durable host file.",
+      "Claim a tool name alone supplies OS isolation.",
+      "Disable all tool schemas.",
+      "Use Deep Agents planning and a state-backed filesystem."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cAssume a virtual file is a durable host file.\u201d Planning and virtual files are distinct from durable host storage and from a sandbox for arbitrary code. The supported action is: Use Deep Agents planning and a state-backed filesystem.",
+      "B": "Incorrect: this proposes \u201cClaim a tool name alone supplies OS isolation.\u201d Planning and virtual files are distinct from durable host storage and from a sandbox for arbitrary code. The supported action is: Use Deep Agents planning and a state-backed filesystem.",
+      "C": "Incorrect: this proposes \u201cDisable all tool schemas.\u201d Planning and virtual files are distinct from durable host storage and from a sandbox for arbitrary code. The supported action is: Use Deep Agents planning and a state-backed filesystem.",
+      "D": "Planning and virtual files are distinct from durable host storage and from a sandbox for arbitrary code."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A01_Deep_Agents_Workflows"
+  },
+  {
+    "id": "M3-03",
+    "domain": "Building",
+    "topic": "Middleware",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a destructive request must be refused before any model call. Which conclusion follows from the available evidence?",
+    "options": [
+      "Put the API key in the rejection message.",
+      "Trust a friendly UI warning as enforcement.",
+      "Validate it in a before-model guard.",
+      "Reject it only after executing its tool."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cPut the API key in the rejection message.\u201d Enforcement belongs at the execution boundary, before the call or side effect it protects. The supported action is: Validate it in a before-model guard.",
+      "B": "Incorrect: this proposes \u201cTrust a friendly UI warning as enforcement.\u201d Enforcement belongs at the execution boundary, before the call or side effect it protects. The supported action is: Validate it in a before-model guard.",
+      "C": "Enforcement belongs at the execution boundary, before the call or side effect it protects.",
+      "D": "Incorrect: this proposes \u201cReject it only after executing its tool.\u201d Enforcement belongs at the execution boundary, before the call or side effect it protects. The supported action is: Validate it in a before-model guard."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I03_Agent_Middleware"
+  },
+  {
+    "id": "M3-04",
+    "domain": "Building",
+    "topic": "Context engineering",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a user message asks the model to ignore tenant policy. Which conclusion follows from the available evidence?",
+    "options": [
+      "Treat a token budget as authorization.",
+      "Keep trusted runtime policy separate from untrusted user content.",
+      "Promote the user message to system instructions.",
+      "Append the entire database to the prompt."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cTreat a token budget as authorization.\u201d Trusted policy and user content need separate provenance; prompt size and data authorization are different concerns. The supported action is: Keep trusted runtime policy separate from untrusted user content.",
+      "B": "Trusted policy and user content need separate provenance; prompt size and data authorization are different concerns.",
+      "C": "Incorrect: this proposes \u201cPromote the user message to system instructions.\u201d Trusted policy and user content need separate provenance; prompt size and data authorization are different concerns. The supported action is: Keep trusted runtime policy separate from untrusted user content.",
+      "D": "Incorrect: this proposes \u201cAppend the entire database to the prompt.\u201d Trusted policy and user content need separate provenance; prompt size and data authorization are different concerns. The supported action is: Keep trusted runtime policy separate from untrusted user content."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I05_Context_Engineering"
+  },
+  {
+    "id": "M3-05",
+    "domain": "Building",
+    "topic": "Instruction files",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a repository has AGENTS.md and one selected review skill. Which conclusion follows from the available evidence?",
+    "options": [
+      "Load repository guidance and explicitly select the relevant skill.",
+      "Assume every SDK automatically discovers every file.",
+      "Treat uploaded document instructions as developer policy.",
+      "Run a shell command mentioned in untrusted text."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Instruction discovery is framework-specific; files and skill metadata must be loaded through the intended mechanism.",
+      "B": "Incorrect: this proposes \u201cAssume every SDK automatically discovers every file.\u201d Instruction discovery is framework-specific; files and skill metadata must be loaded through the intended mechanism. The supported action is: Load repository guidance and explicitly select the relevant skill.",
+      "C": "Incorrect: this proposes \u201cTreat uploaded document instructions as developer policy.\u201d Instruction discovery is framework-specific; files and skill metadata must be loaded through the intended mechanism. The supported action is: Load repository guidance and explicitly select the relevant skill.",
+      "D": "Incorrect: this proposes \u201cRun a shell command mentioned in untrusted text.\u201d Instruction discovery is framework-specific; files and skill metadata must be loaded through the intended mechanism. The supported action is: Load repository guidance and explicitly select the relevant skill."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I14_AGENTS_And_SKILL_Files"
+  },
+  {
+    "id": "M3-06",
+    "domain": "Building",
+    "topic": "Restricted execution",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a learner wants to run arbitrary generated Python in an arithmetic lesson. Which conclusion follows from the available evidence?",
+    "options": [
+      "Use eval because a timeout makes it safe.",
+      "Call shell=True with the generated text.",
+      "Describe resource limits as a complete OS sandbox.",
+      "Reject it; the lesson accepts only an arithmetic AST allowlist."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cUse eval because a timeout makes it safe.\u201d Allowlisted arithmetic and resource limits are useful boundaries but do not provide isolation for arbitrary Python. The supported action is: Reject it; the lesson accepts only an arithmetic AST allowlist.",
+      "B": "Incorrect: this proposes \u201cCall shell=True with the generated text.\u201d Allowlisted arithmetic and resource limits are useful boundaries but do not provide isolation for arbitrary Python. The supported action is: Reject it; the lesson accepts only an arithmetic AST allowlist.",
+      "C": "Incorrect: this proposes \u201cDescribe resource limits as a complete OS sandbox.\u201d Allowlisted arithmetic and resource limits are useful boundaries but do not provide isolation for arbitrary Python. The supported action is: Reject it; the lesson accepts only an arithmetic AST allowlist.",
+      "D": "Allowlisted arithmetic and resource limits are useful boundaries but do not provide isolation for arbitrary Python."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A04_Sandboxed_Execution"
+  },
+  {
+    "id": "M3-07",
+    "domain": "Building",
+    "topic": "Tool protocol",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, two tool calls return results in a different order. Which conclusion follows from the available evidence?",
+    "options": [
+      "Discard the call IDs.",
+      "Trust tool names to authorize arbitrary arguments.",
+      "Correlate each result with its tool_call_id.",
+      "Match by display position only."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cDiscard the call IDs.\u201d Tool-call IDs tie results to requests; tool allowlists and argument validation still apply. The supported action is: Correlate each result with its tool_call_id.",
+      "B": "Incorrect: this proposes \u201cTrust tool names to authorize arbitrary arguments.\u201d Tool-call IDs tie results to requests; tool allowlists and argument validation still apply. The supported action is: Correlate each result with its tool_call_id.",
+      "C": "Tool-call IDs tie results to requests; tool allowlists and argument validation still apply.",
+      "D": "Incorrect: this proposes \u201cMatch by display position only.\u201d Tool-call IDs tie results to requests; tool allowlists and argument validation still apply. The supported action is: Correlate each result with its tool_call_id."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "01_Beginner/B13_Tool_Calling"
+  },
+  {
+    "id": "M3-08",
+    "domain": "Building",
+    "topic": "Structured output",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a contact output has an age of -1 and an unknown field. Which conclusion follows from the available evidence?",
+    "options": [
+      "Store the provider key in the contact record.",
+      "Reject it using the explicit validation schema.",
+      "Silently convert every malformed response to success.",
+      "Treat JSON syntax as complete schema validation."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cStore the provider key in the contact record.\u201d Valid JSON can still violate types, bounds, and allowed fields. The supported action is: Reject it using the explicit validation schema.",
+      "B": "Valid JSON can still violate types, bounds, and allowed fields.",
+      "C": "Incorrect: this proposes \u201cSilently convert every malformed response to success.\u201d Valid JSON can still violate types, bounds, and allowed fields. The supported action is: Reject it using the explicit validation schema.",
+      "D": "Incorrect: this proposes \u201cTreat JSON syntax as complete schema validation.\u201d Valid JSON can still violate types, bounds, and allowed fields. The supported action is: Reject it using the explicit validation schema."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "01_Beginner/B08_Structured_Output"
+  },
+  {
+    "id": "M3-09",
+    "domain": "Building",
+    "topic": "Memory",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a browser session ends but the learner expects preferences to remain. Which conclusion follows from the available evidence?",
+    "options": [
+      "Persist preferences in durable storage with a user namespace.",
+      "Rely on session state as disk durability.",
+      "Use one global preference key for all tenants.",
+      "Call a larger context window a database."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Prompt context, browser state, and durable long-term storage have different lifetimes.",
+      "B": "Incorrect: this proposes \u201cRely on session state as disk durability.\u201d Prompt context, browser state, and durable long-term storage have different lifetimes. The supported action is: Persist preferences in durable storage with a user namespace.",
+      "C": "Incorrect: this proposes \u201cUse one global preference key for all tenants.\u201d Prompt context, browser state, and durable long-term storage have different lifetimes. The supported action is: Persist preferences in durable storage with a user namespace.",
+      "D": "Incorrect: this proposes \u201cCall a larger context window a database.\u201d Prompt context, browser state, and durable long-term storage have different lifetimes. The supported action is: Persist preferences in durable storage with a user namespace."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I06_Persistent_Memory"
+  },
+  {
+    "id": "M3-10",
+    "domain": "Building",
+    "topic": "Retrieval grounding",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a query has no relevant retrieved source. Which conclusion follows from the available evidence?",
+    "options": [
+      "Invent a citation to make the answer look complete.",
+      "Treat similarity score as proof of truth.",
+      "Claim lexical hashing understands semantic synonyms.",
+      "Abstain or request more evidence."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cInvent a citation to make the answer look complete.\u201d Retrieval can fail; a transparent no-evidence path is preferable to unsupported claims. The supported action is: Abstain or request more evidence.",
+      "B": "Incorrect: this proposes \u201cTreat similarity score as proof of truth.\u201d Retrieval can fail; a transparent no-evidence path is preferable to unsupported claims. The supported action is: Abstain or request more evidence.",
+      "C": "Incorrect: this proposes \u201cClaim lexical hashing understands semantic synonyms.\u201d Retrieval can fail; a transparent no-evidence path is preferable to unsupported claims. The supported action is: Abstain or request more evidence.",
+      "D": "Retrieval can fail; a transparent no-evidence path is preferable to unsupported claims."
+    },
+    "reference": "https://docs.langchain.com/oss/python/langchain/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "01_Beginner/B19_Simple_RAG"
+  },
+  {
+    "id": "M3-11",
+    "domain": "Testing",
+    "topic": "Code evaluators",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a numeric answer must exactly match a reference after normalization. Which conclusion follows from the available evidence?",
+    "options": [
+      "Use latency as the correctness label.",
+      "Assume a passing formatter proves the answer.",
+      "Use a deterministic code-based evaluator.",
+      "Require an LLM judge for every equality check."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cUse latency as the correctness label.\u201d Deterministic properties should be measured directly rather than delegated unnecessarily to a probabilistic judge. The supported action is: Use a deterministic code-based evaluator.",
+      "B": "Incorrect: this proposes \u201cAssume a passing formatter proves the answer.\u201d Deterministic properties should be measured directly rather than delegated unnecessarily to a probabilistic judge. The supported action is: Use a deterministic code-based evaluator.",
+      "C": "Deterministic properties should be measured directly rather than delegated unnecessarily to a probabilistic judge.",
+      "D": "Incorrect: this proposes \u201cRequire an LLM judge for every equality check.\u201d Deterministic properties should be measured directly rather than delegated unnecessarily to a probabilistic judge. The supported action is: Use a deterministic code-based evaluator."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I15_Code_Based_Evaluators"
+  },
+  {
+    "id": "M3-12",
+    "domain": "Testing",
+    "topic": "LLM judges",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, two answers have equivalent meaning but different wording. Which conclusion follows from the available evidence?",
+    "options": [
+      "Omit human alignment checks.",
+      "Use a rubric-based judge and validate its structured output.",
+      "Treat raw token overlap as semantic certainty.",
+      "Let candidate text rewrite the rubric."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cOmit human alignment checks.\u201d A judge can assess semantic criteria but requires a rubric, input boundaries, and calibration. The supported action is: Use a rubric-based judge and validate its structured output.",
+      "B": "A judge can assess semantic criteria but requires a rubric, input boundaries, and calibration.",
+      "C": "Incorrect: this proposes \u201cTreat raw token overlap as semantic certainty.\u201d A judge can assess semantic criteria but requires a rubric, input boundaries, and calibration. The supported action is: Use a rubric-based judge and validate its structured output.",
+      "D": "Incorrect: this proposes \u201cLet candidate text rewrite the rubric.\u201d A judge can assess semantic criteria but requires a rubric, input boundaries, and calibration. The supported action is: Use a rubric-based judge and validate its structured output."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I16_LLM_As_Judge"
+  },
+  {
+    "id": "M3-13",
+    "domain": "Testing",
+    "topic": "Offline evaluation",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a candidate is compared against labeled examples before release. Which conclusion follows from the available evidence?",
+    "options": [
+      "Run a repeatable offline evaluation on a held-out dataset.",
+      "Call it online evaluation because a server is used.",
+      "Tune on every held-out label and report unbiased performance.",
+      "Use only one successful default example."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Offline describes the evaluation workflow on a dataset, not whether networking exists.",
+      "B": "Incorrect: this proposes \u201cCall it online evaluation because a server is used.\u201d Offline describes the evaluation workflow on a dataset, not whether networking exists. The supported action is: Run a repeatable offline evaluation on a held-out dataset.",
+      "C": "Incorrect: this proposes \u201cTune on every held-out label and report unbiased performance.\u201d Offline describes the evaluation workflow on a dataset, not whether networking exists. The supported action is: Run a repeatable offline evaluation on a held-out dataset.",
+      "D": "Incorrect: this proposes \u201cUse only one successful default example.\u201d Offline describes the evaluation workflow on a dataset, not whether networking exists. The supported action is: Run a repeatable offline evaluation on a held-out dataset."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I18_LangSmith_Experiments"
+  },
+  {
+    "id": "M3-14",
+    "domain": "Testing",
+    "topic": "Online evaluation",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a production run has no reference answer. Which conclusion follows from the available evidence?",
+    "options": [
+      "Report exact-match accuracy without a reference.",
+      "Assume low latency means factual correctness.",
+      "Treat a single sentiment signal as complete quality.",
+      "Apply suitable reference-free evaluators and record their limitations."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cReport exact-match accuracy without a reference.\u201d Online checks can measure properties without references; the chosen metric determines what is actually evidenced. The supported action is: Apply suitable reference-free evaluators and record their limitations.",
+      "B": "Incorrect: this proposes \u201cAssume low latency means factual correctness.\u201d Online checks can measure properties without references; the chosen metric determines what is actually evidenced. The supported action is: Apply suitable reference-free evaluators and record their limitations.",
+      "C": "Incorrect: this proposes \u201cTreat a single sentiment signal as complete quality.\u201d Online checks can measure properties without references; the chosen metric determines what is actually evidenced. The supported action is: Apply suitable reference-free evaluators and record their limitations.",
+      "D": "Online checks can measure properties without references; the chosen metric determines what is actually evidenced."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I19_Offline_Online_Evaluations"
+  },
+  {
+    "id": "M3-15",
+    "domain": "Testing",
+    "topic": "Datasets",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a learner stores example inputs but no expected outputs or metadata. Which conclusion follows from the available evidence?",
+    "options": [
+      "Overwrite examples without recording changes.",
+      "Call an assistant configuration an evaluation dataset.",
+      "Add reference outputs and stable example identifiers where the evaluator needs them.",
+      "Use only the latest production response as every reference."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cOverwrite examples without recording changes.\u201d Stable examples and references support repeatable comparisons and error analysis. The supported action is: Add reference outputs and stable example identifiers where the evaluator needs them.",
+      "B": "Incorrect: this proposes \u201cCall an assistant configuration an evaluation dataset.\u201d Stable examples and references support repeatable comparisons and error analysis. The supported action is: Add reference outputs and stable example identifiers where the evaluator needs them.",
+      "C": "Stable examples and references support repeatable comparisons and error analysis.",
+      "D": "Incorrect: this proposes \u201cUse only the latest production response as every reference.\u201d Stable examples and references support repeatable comparisons and error analysis. The supported action is: Add reference outputs and stable example identifiers where the evaluator needs them."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I17_LangSmith_Datasets"
+  },
+  {
+    "id": "M3-16",
+    "domain": "Testing",
+    "topic": "Experiments",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, version B is evaluated on easier examples than version A. Which conclusion follows from the available evidence?",
+    "options": [
+      "Ignore per-example failures when means improve.",
+      "Compare both candidates on the same versioned examples and evaluator settings.",
+      "Attribute the difference entirely to the model.",
+      "Compare only the number of green badges."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cIgnore per-example failures when means improve.\u201d Controlled experiment inputs are necessary to interpret version differences. The supported action is: Compare both candidates on the same versioned examples and evaluator settings.",
+      "B": "Controlled experiment inputs are necessary to interpret version differences.",
+      "C": "Incorrect: this proposes \u201cAttribute the difference entirely to the model.\u201d Controlled experiment inputs are necessary to interpret version differences. The supported action is: Compare both candidates on the same versioned examples and evaluator settings.",
+      "D": "Incorrect: this proposes \u201cCompare only the number of green badges.\u201d Controlled experiment inputs are necessary to interpret version differences. The supported action is: Compare both candidates on the same versioned examples and evaluator settings."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I18_LangSmith_Experiments"
+  },
+  {
+    "id": "M3-17",
+    "domain": "Testing",
+    "topic": "Evaluator alignment",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a judge accepts many outputs rejected by human reviewers. Which conclusion follows from the available evidence?",
+    "options": [
+      "Inspect false positives and revise or calibrate the rubric using labeled review data.",
+      "Report agreement without the confusion matrix.",
+      "Replace undefined precision with 100%.",
+      "Remove disagreeing examples from every report."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Agreement alone can hide systematic acceptance errors; false positives and false negatives have distinct operational costs.",
+      "B": "Incorrect: this proposes \u201cReport agreement without the confusion matrix.\u201d Agreement alone can hide systematic acceptance errors; false positives and false negatives have distinct operational costs. The supported action is: Inspect false positives and revise or calibrate the rubric using labeled review data.",
+      "C": "Incorrect: this proposes \u201cReplace undefined precision with 100%.\u201d Agreement alone can hide systematic acceptance errors; false positives and false negatives have distinct operational costs. The supported action is: Inspect false positives and revise or calibrate the rubric using labeled review data.",
+      "D": "Incorrect: this proposes \u201cRemove disagreeing examples from every report.\u201d Agreement alone can hide systematic acceptance errors; false positives and false negatives have distinct operational costs. The supported action is: Inspect false positives and revise or calibrate the rubric using labeled review data."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I20_Evaluator_Alignment"
+  },
+  {
+    "id": "M3-18",
+    "domain": "Testing",
+    "topic": "Dataset leakage",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, an evaluator is tuned repeatedly on the final benchmark. Which conclusion follows from the available evidence?",
+    "options": [
+      "Report the tuned benchmark as unbiased generalization.",
+      "Put reference answers into every candidate prompt.",
+      "Delete hard examples to improve the score.",
+      "Reserve a separate held-out set for the final assessment."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cReport the tuned benchmark as unbiased generalization.\u201d Tuning on evaluation labels leaks information and overstates generalization. The supported action is: Reserve a separate held-out set for the final assessment.",
+      "B": "Incorrect: this proposes \u201cPut reference answers into every candidate prompt.\u201d Tuning on evaluation labels leaks information and overstates generalization. The supported action is: Reserve a separate held-out set for the final assessment.",
+      "C": "Incorrect: this proposes \u201cDelete hard examples to improve the score.\u201d Tuning on evaluation labels leaks information and overstates generalization. The supported action is: Reserve a separate held-out set for the final assessment.",
+      "D": "Tuning on evaluation labels leaks information and overstates generalization."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I18_LangSmith_Experiments"
+  },
+  {
+    "id": "M3-19",
+    "domain": "Testing",
+    "topic": "Boundary tests",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, all tests use valid default inputs. Which conclusion follows from the available evidence?",
+    "options": [
+      "Catch every error and return a fabricated valid result.",
+      "Disable failing assertions.",
+      "Add malformed, empty, oversized, and unsupported-input cases.",
+      "Assume default UI success covers failure behavior."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cCatch every error and return a fabricated valid result.\u201d Failure-path tests establish validation behavior and can reveal unsafe execution or stale UI states. The supported action is: Add malformed, empty, oversized, and unsupported-input cases.",
+      "B": "Incorrect: this proposes \u201cDisable failing assertions.\u201d Failure-path tests establish validation behavior and can reveal unsafe execution or stale UI states. The supported action is: Add malformed, empty, oversized, and unsupported-input cases.",
+      "C": "Failure-path tests establish validation behavior and can reveal unsafe execution or stale UI states.",
+      "D": "Incorrect: this proposes \u201cAssume default UI success covers failure behavior.\u201d Failure-path tests establish validation behavior and can reveal unsafe execution or stale UI states. The supported action is: Add malformed, empty, oversized, and unsupported-input cases."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "01_Beginner/B14_Calculator_Agent"
+  },
+  {
+    "id": "M3-20",
+    "domain": "Testing",
+    "topic": "Release gates",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a retrieval score passes but no generated-answer evaluation exists. Which conclusion follows from the available evidence?",
+    "options": [
+      "Call every passing local fixture a deployed service.",
+      "Describe the gate as evidence quality only and add answer-quality checks before claiming broader readiness.",
+      "Claim production answer correctness is certified.",
+      "Treat citation presence as factual support."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cCall every passing local fixture a deployed service.\u201d A metric validates only its defined property; retrieval relevance and answer correctness are separate. The supported action is: Describe the gate as evidence quality only and add answer-quality checks before claiming broader readiness.",
+      "B": "A metric validates only its defined property; retrieval relevance and answer correctness are separate.",
+      "C": "Incorrect: this proposes \u201cClaim production answer correctness is certified.\u201d A metric validates only its defined property; retrieval relevance and answer correctness are separate. The supported action is: Describe the gate as evidence quality only and add answer-quality checks before claiming broader readiness.",
+      "D": "Incorrect: this proposes \u201cTreat citation presence as factual support.\u201d A metric validates only its defined property; retrieval relevance and answer correctness are separate. The supported action is: Describe the gate as evidence quality only and add answer-quality checks before claiming broader readiness."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "05_Capstone_Projects/C05_Complete_Agent_Engineering_Platform"
+  },
+  {
+    "id": "M3-21",
+    "domain": "Deploying",
+    "topic": "Graph export",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a compiled graph and langgraph.json exist locally. Which conclusion follows from the available evidence?",
+    "options": [
+      "Validate imports and invocation, then separately deploy and verify the managed service.",
+      "Claim the JSON manifest proves deployment.",
+      "Assume a local PID proves endpoint behavior.",
+      "Expose an unauthenticated tutorial server publicly."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "A graph declaration is a deployment input, not evidence that a remote deployment exists or works.",
+      "B": "Incorrect: this proposes \u201cClaim the JSON manifest proves deployment.\u201d A graph declaration is a deployment input, not evidence that a remote deployment exists or works. The supported action is: Validate imports and invocation, then separately deploy and verify the managed service.",
+      "C": "Incorrect: this proposes \u201cAssume a local PID proves endpoint behavior.\u201d A graph declaration is a deployment input, not evidence that a remote deployment exists or works. The supported action is: Validate imports and invocation, then separately deploy and verify the managed service.",
+      "D": "Incorrect: this proposes \u201cExpose an unauthenticated tutorial server publicly.\u201d A graph declaration is a deployment input, not evidence that a remote deployment exists or works. The supported action is: Validate imports and invocation, then separately deploy and verify the managed service."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A08_Graph_Deployment"
+  },
+  {
+    "id": "M3-22",
+    "domain": "Deploying",
+    "topic": "Deployment revision",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a team needs to identify which code version a managed deployment runs. Which conclusion follows from the available evidence?",
+    "options": [
+      "Use a conversation thread ID as the code revision.",
+      "Assume an assistant name identifies immutable code.",
+      "Overwrite revision history whenever configuration changes.",
+      "Track the deployment revision and verify the active version."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cUse a conversation thread ID as the code revision.\u201d Managed revisions version deployed code/configuration; local content hashes in the lesson are a limited versioning analogy. The supported action is: Track the deployment revision and verify the active version.",
+      "B": "Incorrect: this proposes \u201cAssume an assistant name identifies immutable code.\u201d Managed revisions version deployed code/configuration; local content hashes in the lesson are a limited versioning analogy. The supported action is: Track the deployment revision and verify the active version.",
+      "C": "Incorrect: this proposes \u201cOverwrite revision history whenever configuration changes.\u201d Managed revisions version deployed code/configuration; local content hashes in the lesson are a limited versioning analogy. The supported action is: Track the deployment revision and verify the active version.",
+      "D": "Managed revisions version deployed code/configuration; local content hashes in the lesson are a limited versioning analogy."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A09_Revisions_And_Assistants"
+  },
+  {
+    "id": "M3-23",
+    "domain": "Deploying",
+    "topic": "Assistants",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, two customer workflows share graph code but need different configuration. Which conclusion follows from the available evidence?",
+    "options": [
+      "Treat assistants as user authentication tokens.",
+      "Assume every assistant configuration is a new deployment.",
+      "Use distinct assistant configurations for that graph where supported.",
+      "Clone a conversation thread as a substitute for configuration."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cTreat assistants as user authentication tokens.\u201d Assistants configure graph behavior; deployments, threads, and identities have different responsibilities. The supported action is: Use distinct assistant configurations for that graph where supported.",
+      "B": "Incorrect: this proposes \u201cAssume every assistant configuration is a new deployment.\u201d Assistants configure graph behavior; deployments, threads, and identities have different responsibilities. The supported action is: Use distinct assistant configurations for that graph where supported.",
+      "C": "Assistants configure graph behavior; deployments, threads, and identities have different responsibilities.",
+      "D": "Incorrect: this proposes \u201cClone a conversation thread as a substitute for configuration.\u201d Assistants configure graph behavior; deployments, threads, and identities have different responsibilities. The supported action is: Use distinct assistant configurations for that graph where supported."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A09_Revisions_And_Assistants"
+  },
+  {
+    "id": "M3-24",
+    "domain": "Deploying",
+    "topic": "Threads",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a conversation continues over several separate invocations. Which conclusion follows from the available evidence?",
+    "options": [
+      "Treat a run as a durable identity provider.",
+      "Keep a thread for conversation state and record each execution as a run.",
+      "Create a new deployment for each message.",
+      "Use one thread across all tenants."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cTreat a run as a durable identity provider.\u201d Threads organize continuing state; runs represent executions within or against that state. The supported action is: Keep a thread for conversation state and record each execution as a run.",
+      "B": "Threads organize continuing state; runs represent executions within or against that state.",
+      "C": "Incorrect: this proposes \u201cCreate a new deployment for each message.\u201d Threads organize continuing state; runs represent executions within or against that state. The supported action is: Keep a thread for conversation state and record each execution as a run.",
+      "D": "Incorrect: this proposes \u201cUse one thread across all tenants.\u201d Threads organize continuing state; runs represent executions within or against that state. The supported action is: Keep a thread for conversation state and record each execution as a run."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A10_Threads_And_Runs"
+  },
+  {
+    "id": "M3-25",
+    "domain": "Deploying",
+    "topic": "Runs",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a service accepts a request but processing is not complete. Which conclusion follows from the available evidence?",
+    "options": [
+      "Track execution status and verify the final output or failure.",
+      "Mark every accepted request as successful.",
+      "Treat a run ID alone as proof of completion.",
+      "Ignore errors after the client disconnects."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Acceptance and execution completion are different states and need separate evidence.",
+      "B": "Incorrect: this proposes \u201cMark every accepted request as successful.\u201d Acceptance and execution completion are different states and need separate evidence. The supported action is: Track execution status and verify the final output or failure.",
+      "C": "Incorrect: this proposes \u201cTreat a run ID alone as proof of completion.\u201d Acceptance and execution completion are different states and need separate evidence. The supported action is: Track execution status and verify the final output or failure.",
+      "D": "Incorrect: this proposes \u201cIgnore errors after the client disconnects.\u201d Acceptance and execution completion are different states and need separate evidence. The supported action is: Track execution status and verify the final output or failure."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A10_Threads_And_Runs"
+  },
+  {
+    "id": "M3-26",
+    "domain": "Deploying",
+    "topic": "Authentication",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a token signature is invalid. Which conclusion follows from the available evidence?",
+    "options": [
+      "Authorize it because the claimed role is editor.",
+      "Trust the tenant string from the request body.",
+      "Log the complete token to help debugging.",
+      "Reject the identity before evaluating resource permissions."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cAuthorize it because the claimed role is editor.\u201d Authentication verifies the asserted identity; authorization cannot safely rely on unverified claims. The supported action is: Reject the identity before evaluating resource permissions.",
+      "B": "Incorrect: this proposes \u201cTrust the tenant string from the request body.\u201d Authentication verifies the asserted identity; authorization cannot safely rely on unverified claims. The supported action is: Reject the identity before evaluating resource permissions.",
+      "C": "Incorrect: this proposes \u201cLog the complete token to help debugging.\u201d Authentication verifies the asserted identity; authorization cannot safely rely on unverified claims. The supported action is: Reject the identity before evaluating resource permissions.",
+      "D": "Authentication verifies the asserted identity; authorization cannot safely rely on unverified claims."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A11_Authentication_Authorization"
+  },
+  {
+    "id": "M3-27",
+    "domain": "Deploying",
+    "topic": "Authorization",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, an authenticated team-a editor requests team-b data. Which conclusion follows from the available evidence?",
+    "options": [
+      "Filter the output only after sending all documents to the model.",
+      "Treat a UI tenant selector as production authorization.",
+      "Deny the cross-tenant request.",
+      "Allow it because authentication succeeded."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cFilter the output only after sending all documents to the model.\u201d Authenticated identity does not imply access to every tenant; filter authorized data before retrieval and model exposure. The supported action is: Deny the cross-tenant request.",
+      "B": "Incorrect: this proposes \u201cTreat a UI tenant selector as production authorization.\u201d Authenticated identity does not imply access to every tenant; filter authorized data before retrieval and model exposure. The supported action is: Deny the cross-tenant request.",
+      "C": "Authenticated identity does not imply access to every tenant; filter authorized data before retrieval and model exposure.",
+      "D": "Incorrect: this proposes \u201cAllow it because authentication succeeded.\u201d Authenticated identity does not imply access to every tenant; filter authorized data before retrieval and model exposure. The supported action is: Deny the cross-tenant request."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "05_Capstone_Projects/C02_Enterprise_RAG_Agent"
+  },
+  {
+    "id": "M3-28",
+    "domain": "Deploying",
+    "topic": "Secrets",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, an API key is needed by a live integration. Which conclusion follows from the available evidence?",
+    "options": [
+      "Disable TLS verification to bypass access problems.",
+      "Load it from secure runtime configuration and avoid exposing its value.",
+      "Commit it to app.py for convenience.",
+      "Put it in downloaded evidence."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cDisable TLS verification to bypass access problems.\u201d Secrets belong in secure configuration; transport verification and least-privilege access remain necessary. The supported action is: Load it from secure runtime configuration and avoid exposing its value.",
+      "B": "Secrets belong in secure configuration; transport verification and least-privilege access remain necessary.",
+      "C": "Incorrect: this proposes \u201cCommit it to app.py for convenience.\u201d Secrets belong in secure configuration; transport verification and least-privilege access remain necessary. The supported action is: Load it from secure runtime configuration and avoid exposing its value.",
+      "D": "Incorrect: this proposes \u201cPut it in downloaded evidence.\u201d Secrets belong in secure configuration; transport verification and least-privilege access remain necessary. The supported action is: Load it from secure runtime configuration and avoid exposing its value."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A12_Secrets_Management"
+  },
+  {
+    "id": "M3-29",
+    "domain": "Deploying",
+    "topic": "Durability",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, state survives a process restart on one disk. Which conclusion follows from the available evidence?",
+    "options": [
+      "Describe that as process-level durability and plan backups/replication for disk or region loss.",
+      "Claim region-failure tolerance from local SQLite alone.",
+      "Treat an in-memory store as a backup.",
+      "Ignore concurrency when multiple writers update state."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Durability guarantees depend on the storage and failure model; a local database is not multi-region replication.",
+      "B": "Incorrect: this proposes \u201cClaim region-failure tolerance from local SQLite alone.\u201d Durability guarantees depend on the storage and failure model; a local database is not multi-region replication. The supported action is: Describe that as process-level durability and plan backups/replication for disk or region loss.",
+      "C": "Incorrect: this proposes \u201cTreat an in-memory store as a backup.\u201d Durability guarantees depend on the storage and failure model; a local database is not multi-region replication. The supported action is: Describe that as process-level durability and plan backups/replication for disk or region loss.",
+      "D": "Incorrect: this proposes \u201cIgnore concurrency when multiple writers update state.\u201d Durability guarantees depend on the storage and failure model; a local database is not multi-region replication. The supported action is: Describe that as process-level durability and plan backups/replication for disk or region loss."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A13_Persistent_Storage"
+  },
+  {
+    "id": "M3-30",
+    "domain": "Deploying",
+    "topic": "Regional failover",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, the primary is down and the replica has an outdated revision. Which conclusion follows from the available evidence?",
+    "options": [
+      "Assume health implies current data.",
+      "Claim a local routing simulation created cloud regions.",
+      "Silently report the stale replica as current.",
+      "Apply the chosen consistency policy; this lesson refuses stale failover."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cAssume health implies current data.\u201d Health, revision freshness, and availability are separate inputs to failover policy. The supported action is: Apply the chosen consistency policy; this lesson refuses stale failover.",
+      "B": "Incorrect: this proposes \u201cClaim a local routing simulation created cloud regions.\u201d Health, revision freshness, and availability are separate inputs to failover policy. The supported action is: Apply the chosen consistency policy; this lesson refuses stale failover.",
+      "C": "Incorrect: this proposes \u201cSilently report the stale replica as current.\u201d Health, revision freshness, and availability are separate inputs to failover policy. The supported action is: Apply the chosen consistency policy; this lesson refuses stale failover.",
+      "D": "Health, revision freshness, and availability are separate inputs to failover policy."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A14_Multi_Region_Deployment"
+  },
+  {
+    "id": "M3-31",
+    "domain": "Monitoring",
+    "topic": "Trace structure",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, model and tool spans overlap under a parent run. Which conclusion follows from the available evidence?",
+    "options": [
+      "Discard parent IDs.",
+      "Treat the longest child as a universal critical-path algorithm.",
+      "Use root wall-clock duration and inspect nested spans without summing overlapping durations.",
+      "Add all spans to estimate root wall-clock latency."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cDiscard parent IDs.\u201d Nested and parallel work can overlap; tree structure and timing semantics matter. The supported action is: Use root wall-clock duration and inspect nested spans without summing overlapping durations.",
+      "B": "Incorrect: this proposes \u201cTreat the longest child as a universal critical-path algorithm.\u201d Nested and parallel work can overlap; tree structure and timing semantics matter. The supported action is: Use root wall-clock duration and inspect nested spans without summing overlapping durations.",
+      "C": "Nested and parallel work can overlap; tree structure and timing semantics matter.",
+      "D": "Incorrect: this proposes \u201cAdd all spans to estimate root wall-clock latency.\u201d Nested and parallel work can overlap; tree structure and timing semantics matter. The supported action is: Use root wall-clock duration and inspect nested spans without summing overlapping durations."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A15_Trace_Analysis"
+  },
+  {
+    "id": "M3-32",
+    "domain": "Monitoring",
+    "topic": "Thread analysis",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a long conversation has many inexpensive runs. Which conclusion follows from the available evidence?",
+    "options": [
+      "Assume all threads contain one execution.",
+      "Aggregate run cost and error patterns across the thread.",
+      "Inspect one cheap run and conclude the whole conversation is cheap.",
+      "Compare thread and run counts as if they were identical."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cAssume all threads contain one execution.\u201d Conversation-level cost and reliability require aggregation across constituent runs. The supported action is: Aggregate run cost and error patterns across the thread.",
+      "B": "Conversation-level cost and reliability require aggregation across constituent runs.",
+      "C": "Incorrect: this proposes \u201cInspect one cheap run and conclude the whole conversation is cheap.\u201d Conversation-level cost and reliability require aggregation across constituent runs. The supported action is: Aggregate run cost and error patterns across the thread.",
+      "D": "Incorrect: this proposes \u201cCompare thread and run counts as if they were identical.\u201d Conversation-level cost and reliability require aggregation across constituent runs. The supported action is: Aggregate run cost and error patterns across the thread."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A16_Thread_Analysis"
+  },
+  {
+    "id": "M3-33",
+    "domain": "Monitoring",
+    "topic": "Latency percentiles",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, one slow run affects a tail-latency target. Which conclusion follows from the available evidence?",
+    "options": [
+      "Inspect a defined percentile method and the observation count.",
+      "Use the fastest request as the p95.",
+      "Assume a mean reveals every tail regression.",
+      "Ignore the percentile definition."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Tail latency depends on the sample and method; the lesson uses nearest-rank percentiles.",
+      "B": "Incorrect: this proposes \u201cUse the fastest request as the p95.\u201d Tail latency depends on the sample and method; the lesson uses nearest-rank percentiles. The supported action is: Inspect a defined percentile method and the observation count.",
+      "C": "Incorrect: this proposes \u201cAssume a mean reveals every tail regression.\u201d Tail latency depends on the sample and method; the lesson uses nearest-rank percentiles. The supported action is: Inspect a defined percentile method and the observation count.",
+      "D": "Incorrect: this proposes \u201cIgnore the percentile definition.\u201d Tail latency depends on the sample and method; the lesson uses nearest-rank percentiles. The supported action is: Inspect a defined percentile method and the observation count."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A17_Cost_Latency_Monitoring"
+  },
+  {
+    "id": "M3-34",
+    "domain": "Monitoring",
+    "topic": "Cost attribution",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a report contains user-supplied cost_usd fields. Which conclusion follows from the available evidence?",
+    "options": [
+      "Call it a provider invoice.",
+      "Treat latency as a token count.",
+      "Assume all models have identical pricing.",
+      "Label the sum as observed input cost, not independently verified billing."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cCall it a provider invoice.\u201d Cost evidence needs known token usage, pricing, and provenance before billing claims are justified. The supported action is: Label the sum as observed input cost, not independently verified billing.",
+      "B": "Incorrect: this proposes \u201cTreat latency as a token count.\u201d Cost evidence needs known token usage, pricing, and provenance before billing claims are justified. The supported action is: Label the sum as observed input cost, not independently verified billing.",
+      "C": "Incorrect: this proposes \u201cAssume all models have identical pricing.\u201d Cost evidence needs known token usage, pricing, and provenance before billing claims are justified. The supported action is: Label the sum as observed input cost, not independently verified billing.",
+      "D": "Cost evidence needs known token usage, pricing, and provenance before billing claims are justified."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A17_Cost_Latency_Monitoring"
+  },
+  {
+    "id": "M3-35",
+    "domain": "Monitoring",
+    "topic": "User sentiment",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, only a few unhappy users leave explicit ratings. Which conclusion follows from the available evidence?",
+    "options": [
+      "Infer factual correctness solely from sentiment.",
+      "Discard negative ratings to improve the dashboard.",
+      "Track sentiment with its sample-selection limits.",
+      "Treat voluntary feedback as an unbiased population estimate."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cInfer factual correctness solely from sentiment.\u201d Feedback can reveal problems while still being biased and incomplete. The supported action is: Track sentiment with its sample-selection limits.",
+      "B": "Incorrect: this proposes \u201cDiscard negative ratings to improve the dashboard.\u201d Feedback can reveal problems while still being biased and incomplete. The supported action is: Track sentiment with its sample-selection limits.",
+      "C": "Feedback can reveal problems while still being biased and incomplete.",
+      "D": "Incorrect: this proposes \u201cTreat voluntary feedback as an unbiased population estimate.\u201d Feedback can reveal problems while still being biased and incomplete. The supported action is: Track sentiment with its sample-selection limits."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A18_Sentiment_And_Insights"
+  },
+  {
+    "id": "M3-36",
+    "domain": "Monitoring",
+    "topic": "Online evaluations and Insights",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a team wants both per-run scoring and cross-run pattern exploration. Which conclusion follows from the available evidence?",
+    "options": [
+      "Assume both workflows are identical.",
+      "Use online evaluators for selected-run scores and Insights-style analysis for aggregate patterns.",
+      "Treat a local topic counter as verified LangSmith Insights.",
+      "Use one score as a complete explanation of every incident."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cAssume both workflows are identical.\u201d Per-run evaluation and exploratory aggregation answer related but different questions. The supported action is: Use online evaluators for selected-run scores and Insights-style analysis for aggregate patterns.",
+      "B": "Per-run evaluation and exploratory aggregation answer related but different questions.",
+      "C": "Incorrect: this proposes \u201cTreat a local topic counter as verified LangSmith Insights.\u201d Per-run evaluation and exploratory aggregation answer related but different questions. The supported action is: Use online evaluators for selected-run scores and Insights-style analysis for aggregate patterns.",
+      "D": "Incorrect: this proposes \u201cUse one score as a complete explanation of every incident.\u201d Per-run evaluation and exploratory aggregation answer related but different questions. The supported action is: Use online evaluators for selected-run scores and Insights-style analysis for aggregate patterns."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A18_Sentiment_And_Insights"
+  },
+  {
+    "id": "M3-37",
+    "domain": "Monitoring",
+    "topic": "Alerts",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, a single slow run appears in a very small window. Which conclusion follows from the available evidence?",
+    "options": [
+      "Apply a defined minimum sample count and threshold before notifying.",
+      "Fire every alert on every request without a policy.",
+      "Assume no alert means no failure.",
+      "Ignore notification delivery status."
+    ],
+    "answer": "A",
+    "explanations": {
+      "A": "Window size and thresholds shape alert reliability; trigger evaluation and delivery are separate.",
+      "B": "Incorrect: this proposes \u201cFire every alert on every request without a policy.\u201d Window size and thresholds shape alert reliability; trigger evaluation and delivery are separate. The supported action is: Apply a defined minimum sample count and threshold before notifying.",
+      "C": "Incorrect: this proposes \u201cAssume no alert means no failure.\u201d Window size and thresholds shape alert reliability; trigger evaluation and delivery are separate. The supported action is: Apply a defined minimum sample count and threshold before notifying.",
+      "D": "Incorrect: this proposes \u201cIgnore notification delivery status.\u201d Window size and thresholds shape alert reliability; trigger evaluation and delivery are separate. The supported action is: Apply a defined minimum sample count and threshold before notifying."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A19_Production_Alerts"
+  },
+  {
+    "id": "M3-38",
+    "domain": "Monitoring",
+    "topic": "Deduplication",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, the same failing observation window is evaluated repeatedly. Which conclusion follows from the available evidence?",
+    "options": [
+      "Send duplicate notifications indefinitely.",
+      "Claim a local ledger is a delivered webhook.",
+      "Delete all evidence after the first failure.",
+      "Deduplicate the alert identity and separately track delivery."
+    ],
+    "answer": "D",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cSend duplicate notifications indefinitely.\u201d Deduplication reduces noise but does not establish delivery or incident resolution. The supported action is: Deduplicate the alert identity and separately track delivery.",
+      "B": "Incorrect: this proposes \u201cClaim a local ledger is a delivered webhook.\u201d Deduplication reduces noise but does not establish delivery or incident resolution. The supported action is: Deduplicate the alert identity and separately track delivery.",
+      "C": "Incorrect: this proposes \u201cDelete all evidence after the first failure.\u201d Deduplication reduces noise but does not establish delivery or incident resolution. The supported action is: Deduplicate the alert identity and separately track delivery.",
+      "D": "Deduplication reduces noise but does not establish delivery or incident resolution."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "03_Advanced/A19_Production_Alerts"
+  },
+  {
+    "id": "M3-39",
+    "domain": "Monitoring",
+    "topic": "Sampling",
+    "difficulty": "Medium",
+    "question": "In a production incident retrospective, production evaluation covers only a sampled subset of runs. Which conclusion follows from the available evidence?",
+    "options": [
+      "Silently exclude errors from every sample.",
+      "Present unrun evaluations as passed.",
+      "Report coverage and avoid claiming every run was evaluated.",
+      "Treat the sample as exhaustive evidence."
+    ],
+    "answer": "C",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cSilently exclude errors from every sample.\u201d Sampling reduces cost but creates coverage limits that must remain visible. The supported action is: Report coverage and avoid claiming every run was evaluated.",
+      "B": "Incorrect: this proposes \u201cPresent unrun evaluations as passed.\u201d Sampling reduces cost but creates coverage limits that must remain visible. The supported action is: Report coverage and avoid claiming every run was evaluated.",
+      "C": "Sampling reduces cost but creates coverage limits that must remain visible.",
+      "D": "Incorrect: this proposes \u201cTreat the sample as exhaustive evidence.\u201d Sampling reduces cost but creates coverage limits that must remain visible. The supported action is: Report coverage and avoid claiming every run was evaluated."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "02_Intermediate/I19_Offline_Online_Evaluations"
+  },
+  {
+    "id": "M3-40",
+    "domain": "Monitoring",
+    "topic": "Trace privacy",
+    "difficulty": "Hard",
+    "question": "In a production incident retrospective, a traceable function receives sensitive user text. Which conclusion follows from the available evidence?",
+    "options": [
+      "Use a random local operation ID as proof of a cloud trace.",
+      "Redact sensitive trace inputs/outputs and verify actual exported records.",
+      "Assume local redaction proves cloud delivery.",
+      "Log API keys to correlate runs."
+    ],
+    "answer": "B",
+    "explanations": {
+      "A": "Incorrect: this proposes \u201cUse a random local operation ID as proof of a cloud trace.\u201d Privacy controls and delivery verification are separate; local IDs are not cloud evidence. The supported action is: Redact sensitive trace inputs/outputs and verify actual exported records.",
+      "B": "Privacy controls and delivery verification are separate; local IDs are not cloud evidence.",
+      "C": "Incorrect: this proposes \u201cAssume local redaction proves cloud delivery.\u201d Privacy controls and delivery verification are separate; local IDs are not cloud evidence. The supported action is: Redact sensitive trace inputs/outputs and verify actual exported records.",
+      "D": "Incorrect: this proposes \u201cLog API keys to correlate runs.\u201d Privacy controls and delivery verification are separate; local IDs are not cloud evidence. The supported action is: Redact sensitive trace inputs/outputs and verify actual exported records."
+    },
+    "reference": "https://docs.langchain.com/langsmith/",
+    "reference_status": "Official URL reference target; current page verification blocked by proxy.",
+    "project": "01_Beginner/B20_LangSmith_Tracing"
+  }
+]
